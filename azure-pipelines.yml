@@ -34,3 +34,9 @@ steps:
     BlackDuckService: '188-blackduck'
     DetectVersion: 'latest'
     DetectArguments: '--detect.project.name=cognitive-services-quickstart-code --detect.project.version.name=develop'
+
+- task: SynopsysPolaris@1
+  inputs:
+    polarisService: 'csprod-polaris-server'
+    polarisCommand: 'analyze'
+    waitForIssues: true
