@@ -34,4 +34,12 @@ steps:
     BlackDuckService: '188-blackduck'
     PolarisService: 'csprod-polaris'
     DetectVersion: 'latest'
-    DetectArguments: '--detect.project.name=cognitive-services-quickstart-code --detect.project.version.name=develop -de --polaris.command=“analyze --coverity-ignore-capture-failure'
+    DetectArguments: '--detect.project.name=cognitive-services-quickstart-code --detect.project.version.name=develop -de --polaris.command=analyze --coverity-ignore-capture-failure'
+
+# Command line
+# Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
+- task: CmdLine@2
+  inputs:
+    script: 'echo build-log.txt'
+    workingDirectory: 'D:/a/1/s/.synopsys/polaris/data/coverity/2020.06/idir/'
+    #failOnStderr: false # Optional
