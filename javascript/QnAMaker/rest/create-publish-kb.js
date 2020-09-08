@@ -33,7 +33,7 @@ const sleep = (waitTimeInMs) => new Promise(resolve => setTimeout(resolve, waitT
 * console or with Visual Studio, the shell (or Visual Studio) needs to be closed
 * and reloaded to take the environment variable into account.
 */
-//<authorization>
+// <authorization>
 const resourceKey = process.env.QNA_MAKER_SUBSCRIPTION_KEY;
 if (! process.env.QNA_MAKER_SUBSCRIPTION_KEY) {
 	throw "Please set/export the environment variable QNA_MAKER_SUBSCRIPTION_KEY.";
@@ -44,7 +44,6 @@ if (! process.env.QNA_MAKER_ENDPOINT) {
 	throw "Please set/export the environment variable QNA_MAKER_ENDPOINT.";
 }
 // </authorization>
-
 
 // <utility>
 // Formats and indents JSON for display.
@@ -58,7 +57,6 @@ const createKb = async () => {
 
     try{
   
-        // <model>
         // Dictionary that holds the knowledge base.
         // The data source includes a QnA pair with metadata, the URL for the
         // QnA Maker FAQ article, and the URL for the Azure Bot Service FAQ article.
@@ -136,7 +134,7 @@ const deleteKb = async (kbId) => {
 }
 // </deleteKb>
 
-// <download>
+// <downloadKb>
 const downloadKb = async (kbId) => {
 
     try{
@@ -160,7 +158,7 @@ const downloadKb = async (kbId) => {
         throw err;
     }
 }
- // </download>
+ // </downloadKb>
 
 // <replaceKb>
 const replaceKb = async (kbId) => {
@@ -205,7 +203,7 @@ const replaceKb = async (kbId) => {
 }      
 // </replaceKb>
 
-// <publish>
+// <publishKb>
 var publishKb = async (kbId) => {
 
     try{
@@ -225,7 +223,7 @@ var publishKb = async (kbId) => {
         throw err;
     }
 };
-// </publish>
+// </publishKb>
 
 // <operationDetails>
 const getOperationStatus = async (result) => {
@@ -295,13 +293,11 @@ const main = async()=>{
         throw err;
     }
 }
-// </main>
 
-// <promise>
 main()
 .then(kbID => {
     console.log("KBID = " + kbID);
 }).catch(err => {
     console.log(JSON.stringify(err));
 })
-// </promise>
+// </main>
