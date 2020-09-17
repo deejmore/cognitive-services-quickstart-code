@@ -36,10 +36,16 @@ steps:
 #    DetectVersion: 'latest'
 #    DetectArguments: '--detect.project.name=cognitive-services-quickstart-code --detect.project.version.name=develop -de --polaris.command=analyze --coverity-ignore-capture-failure'
 
+- task: SynopsysPolaris@1
+  displayName: Running Synopsys Polaris
+  inputs:
+    polarisService: 'sipse-polaris-server'
+    polarisCommand: 'analzye'
 
 # Command line
 # Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
 - task: CmdLine@2
+  displayName: Displaying build-log.txt
   inputs:
     script: 'type build-log.txt'
     workingDirectory: 'D:/a/1/s/.synopsys/polaris/data/coverity/2020.06/idir/'
