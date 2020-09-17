@@ -1,0 +1,11 @@
+javascript/AnomalyDetector/anomaly_detector_quickstart.js
+javascript/QnAMaker/rest/create-publish-kb.js
+javascript/QnAMaker/rest/query-kb.js
+javascript/QnAMaker/sdk/qnamaker_quickstart.js
+java/azure_management_service/quickstart.java
+java/qnamaker/rest/CreateKB.java
+java/qnamaker/rest/PublishKB.java
+java/qnamaker/rest/QueryKB.java
+java/qnamaker/sdk/quickstart.java
+java/qnamaker/sdk/quickstart.java
+

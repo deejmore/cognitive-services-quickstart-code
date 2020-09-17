@@ -10,12 +10,16 @@ capture:
     buildless:
       project:
         languages:
+          - "java"
           - "javascript"
   fileSystem:
-    javascript:
-      extensions: [ts,js]
+    java:
+      extensions: [java]
       files:
-      - directory: ${project.projectDir}\\javascript
+      - directory: ${project.projectDir}/java
+    javascript:
+      files:
+      - directory: ${project.projectDir}/javascript
       - excludeRegex: node_modules|bower_components|vendor
 analyze:
   mode: central

@@ -6,16 +6,10 @@ project:
     name: ${scm.git.commit}
     date: ${scm.git.commit.date}
 capture:
-  coverity:
-    buildless:
-      project:
-        languages:
-          - "javascript"
   fileSystem:
     javascript:
-      extensions: [ts,js]
       files:
-      - directory: ${project.projectDir}\\javascript
+      - directory: ${project.projectDir}
       - excludeRegex: node_modules|bower_components|vendor
 analyze:
   mode: central

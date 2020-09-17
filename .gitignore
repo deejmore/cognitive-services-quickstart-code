@@ -334,3 +334,4 @@ settings.json
 
 #synopsys
 .synopsys/
+.polaris-coverity.zip

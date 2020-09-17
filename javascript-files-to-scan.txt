@@ -1,0 +1,4 @@
+javascript/AnomalyDetector/anomaly_detector_quickstart.js
+javascript/QnAMaker/rest/create-publish-kb.js
+javascript/QnAMaker/rest/query-kb.js
+javascript/QnAMaker/sdk/qnamaker_quickstart.js
