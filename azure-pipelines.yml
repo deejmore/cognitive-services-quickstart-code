@@ -40,7 +40,7 @@ steps:
   displayName: Running Synopsys Polaris
   inputs:
     polarisService: 'sipse-polaris-server'
-    polarisCommand: 'analzye'
+    polarisCommand: 'analyze --coverity-ignore-capture-failure"'
 
 # Command line
 # Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
